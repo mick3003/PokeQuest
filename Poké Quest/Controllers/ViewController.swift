@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     
     var imageViews = [UIImageView]()
     var activityIndicators = [UIActivityIndicatorView]()
+    var buttons = [UIButton]()
+    
+    //var buttonColor = UIColor(red: 1.0, green: 42.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+    var buttonColor = UIColor(white:1.0, alpha: 0.6)
     
     @IBOutlet weak var background: UIImageView!
     
@@ -38,6 +42,12 @@ class ViewController: UIViewController {
         setRandomBackground()
         imageViews = [imageView1, imageView3, imageView2, imageView4]
         activityIndicators = [activityIndicator1, activityIndicator3, activityIndicator2, activityIndicator4]
+        buttons = [button1, button2, button3, button4]
+        
+        for button in buttons {
+            button.layer.cornerRadius = button.frame.height/2.0
+            button.backgroundColor = buttonColor
+        }
         
         resetFormImages()
         
@@ -56,6 +66,13 @@ class ViewController: UIViewController {
             askPokemon()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        view.layoutIfNeeded()
+        
+    }
 
     func askPokemon() {
         resetFormImages()
@@ -71,6 +88,7 @@ class ViewController: UIViewController {
                 
                 self.pokemon = pokemon
                 self.setFormImages()
+                self.setButtonName()
             }
         }
     }
@@ -79,10 +97,6 @@ class ViewController: UIViewController {
         let random = Int(arc4random_uniform(7) + 1);
         let backgroundName = "wall\(random)"
         background.image = UIImage(named: backgroundName)
-    }
-    
-    func downloadInitialData(completion: () -> Void) {
-        
     }
     
     func setFormImages() {
@@ -99,6 +113,13 @@ class ViewController: UIViewController {
                     self.activityIndicators[i].stopAnimating()
                 }
             }
+        }
+    }
+    
+    func setButtonName() {
+        for button in buttons {
+            let randomId = Int(arc4random_uniform(UInt32(allPokemonsNamedUrls.count)) + 1);
+            button.setTitle(allPokemonsNamedUrls[randomId].name, for: .normal)
         }
     }
     
