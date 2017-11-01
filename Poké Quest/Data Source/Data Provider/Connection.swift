@@ -28,21 +28,14 @@ class Connection {
             if error == nil {
                 if let data = data {
                     let jsonData = try? JSONSerialization.jsonObject(with: data, options: [])
-                    
-                    DispatchQueue.main.async {
-                        completion(jsonData ?? [:], nil)
-                    }
+                    completion(jsonData ?? [:], nil)
                 }
                 else {
-                    DispatchQueue.main.async {
-                        completion([], nil)
-                    }
+                    completion([], nil)
                 }
             }
             else {
-                DispatchQueue.main.async {
-                    completion(nil, error)
-                }
+                completion(nil, error)
             }
         }
         task.resume()
@@ -59,21 +52,14 @@ class Connection {
             if error == nil {
                 if let data = data {
                     let image = UIImage(data: data)
-                    
-                    DispatchQueue.main.async {
-                        completion(image, nil)
-                    }
+                    completion(image, nil)
                 }
                 else {
-                    DispatchQueue.main.async {
-                        completion(nil, error)
-                    }
+                    completion(nil, error)
                 }
             }
             else {
-                DispatchQueue.main.async {
-                    completion(nil, error)
-                }
+                completion(nil, error)
             }
         }
         task.resume()
