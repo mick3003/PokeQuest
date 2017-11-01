@@ -20,20 +20,12 @@ class Form {
         name = json["name"] as? String ?? ""
         sprites = [String]()
         
-        if let values = json["sprites"] as? [String: String] {
+        if let values = json["sprites"] as? [String: Any?] {
             
-            if let value = values["front_default"] {
-                sprites.append(value)
-            }
-            if let value = values["back_default"] {
-                sprites.append(value)
-            }
-            if let value = values["front_shiny"] {
-                sprites.append(value)
-            }
-            if let value = values["back_shiny"] {
-                sprites.append(value)
-            }
+            sprites.append(values["front_default"] as? String ?? "")
+            sprites.append(values["back_default"] as? String ?? "")
+            sprites.append(values["front_shiny"] as? String ?? "")
+            sprites.append(values["back_shiny"] as? String ?? "")
         }
     }
 }

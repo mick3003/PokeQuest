@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49512E401FAA57FE004B8319 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49512E3F1FAA57FE004B8319 /* Pokemon Hollow.ttf */; };
 		49AC1CE41FA94D8B00E5590C /* NamedUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC1CE31FA94D8B00E5590C /* NamedUrl.swift */; };
 		49AC1CE61FA9503000E5590C /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC1CE51FA9503000E5590C /* Form.swift */; };
 		49AC1CE81FA9565900E5590C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC1CE71FA9565900E5590C /* Pokemon.swift */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49512E3F1FAA57FE004B8319 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		49512E471FAA5C81004B8319 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Poké Quest/Info.plist"; sourceTree = SOURCE_ROOT; };
 		49AC1CE31FA94D8B00E5590C /* NamedUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedUrl.swift; sourceTree = "<group>"; };
 		49AC1CE51FA9503000E5590C /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		49AC1CE71FA9565900E5590C /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -33,7 +36,6 @@
 		49F6541B1FA8FE430075D1BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49F6541D1FA8FE430075D1BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F654201FA8FE430075D1BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		49F654221FA8FE430075D1BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49512E411FAA5AC5004B8319 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49F654181FA8FE430075D1BA /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49512E421FAA5B25004B8319 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49F6541F1FA8FE430075D1BA /* LaunchScreen.storyboard */,
+				49F6541D1FA8FE430075D1BA /* Assets.xcassets */,
+				49512E471FAA5C81004B8319 /* Info.plist */,
+				49AD2A511FA99FDE0035903D /* Pokemon Solid.ttf */,
+				49512E3F1FAA57FE004B8319 /* Pokemon Hollow.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		49512E431FAA5B46004B8319 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49F654161FA8FE430075D1BA /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		49512E441FAA5B62004B8319 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49F6541A1FA8FE430075D1BA /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		49AC1CEB1FA95DEB00E5590C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,14 +132,11 @@
 		49F654151FA8FE430075D1BA /* Poké Quest */ = {
 			isa = PBXGroup;
 			children = (
+				49512E431FAA5B46004B8319 /* Classes */,
 				49AC1CEE1FA95E0600E5590C /* Data Source */,
-				49F654161FA8FE430075D1BA /* AppDelegate.swift */,
-				49F654181FA8FE430075D1BA /* ViewController.swift */,
-				49F6541A1FA8FE430075D1BA /* Main.storyboard */,
-				49F6541F1FA8FE430075D1BA /* LaunchScreen.storyboard */,
-				49F6541D1FA8FE430075D1BA /* Assets.xcassets */,
-				49F654221FA8FE430075D1BA /* Info.plist */,
-				49AD2A511FA99FDE0035903D /* Pokemon Solid.ttf */,
+				49512E411FAA5AC5004B8319 /* Controllers */,
+				49512E441FAA5B62004B8319 /* Views */,
+				49512E421FAA5B25004B8319 /* Resources */,
 			);
 			path = "Poké Quest";
 			sourceTree = "<group>";
@@ -167,6 +202,7 @@
 			files = (
 				49F654211FA8FE430075D1BA /* LaunchScreen.storyboard in Resources */,
 				49AD2A521FA99FDE0035903D /* Pokemon Solid.ttf in Resources */,
+				49512E401FAA57FE004B8319 /* Pokemon Hollow.ttf in Resources */,
 				49F6541E1FA8FE430075D1BA /* Assets.xcassets in Resources */,
 				49F6541C1FA8FE430075D1BA /* Main.storyboard in Resources */,
 			);

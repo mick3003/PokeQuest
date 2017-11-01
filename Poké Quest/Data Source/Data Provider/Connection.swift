@@ -9,7 +9,6 @@
 import UIKit
 
 typealias ConnectionCompletion = (_ response: Any?, _ error: Error?) -> Void
-typealias ImageCompletion = (_ image: UIImage?, _ error: Error?) -> Void
 
 class Connection {
     
@@ -17,7 +16,14 @@ class Connection {
     
     func connect(endpoint: String, completion: @escaping ConnectionCompletion) {
         
-        let urlString = self.baseUrlString + endpoint
+        var urlString: String
+        
+        if endpoint.hasPrefix("http") {
+            urlString = endpoint
+        }
+        else {
+            urlString = self.baseUrlString + endpoint
+        }
         
         let urlSession = URLSession(configuration: URLSessionConfiguration.default)
         
@@ -41,27 +47,16 @@ class Connection {
         task.resume()
     }
     
-    func downloadImage(fromUrl url: String, completion: @escaping ImageCompletion) {
+    func downloadImageData(fromUrl url: String, completion: @escaping ConnectionCompletion) {
         
         let urlSession = URLSession(configuration: .default)
         
-        let task = urlSession.dataTask(with: URL(string: url)! ) {
-            
-            data, response, error in
-            
-            if error == nil {
-                if let data = data {
-                    let image = UIImage(data: data)
-                    completion(image, nil)
-                }
-                else {
-                    completion(nil, error)
-                }
-            }
-            else {
-                completion(nil, error)
-            }
+        if let urlString = URL(string: url) {
+            let task = urlSession.dataTask(with: urlString ) { data, response, error in completion(data, error) }
+            task.resume()
         }
-        task.resume()
+        else {
+            completion(nil, nil)
+        }
     }
 }

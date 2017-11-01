@@ -18,9 +18,10 @@ import UIKit
 
 typealias DataProviderCompletion = (_ response: Any?) -> Void
 
+// Pokemon Data Provider
 class DataProvider {
     
-    let connection = Connection()
+    private let connection = Connection()
     
     func pockemonCount(completion: @escaping DataProviderCompletion) {
         
@@ -41,6 +42,34 @@ class DataProvider {
         }
     }
     
+    func allPokemonNames(completion: @escaping DataProviderCompletion) {
+        
+        connection.connect(endpoint: "pokemon/?limit=900&offset=0") {
+            
+            response, error in
+            
+            if let json = response as? [String: Any] {
+                let namedUrls = NamedUrl.namedUrls(withArray: json["results"] as? Array)
+                
+                var filteredNames = [NamedUrl] ()
+                for nameUrl in namedUrls {
+                    if nameUrl.name.count < 12 {
+                        filteredNames.append(nameUrl)
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    completion(filteredNames)
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            }
+        }
+    }
+    
     func pokemon(withId id: Int, completion: @escaping DataProviderCompletion) {
         
         connection.connect(endpoint: "pokemon/\(id)") {
@@ -51,6 +80,7 @@ class DataProvider {
                 let pokemon = Pokemon(withJson: json)
                 
                 if pokemon.forms.count > 0 {
+                    
                     self.connection.connect(endpoint: pokemon.forms[0].url) {
                         
                         response, error in
@@ -59,9 +89,15 @@ class DataProvider {
                             let form = Form(withJson: json)
                             pokemon.form = form
                         }
+                        
                         DispatchQueue.main.async {
                             completion(pokemon)
                         }
+                    }
+                }
+                else {
+                    DispatchQueue.main.async {
+                        completion(pokemon)
                     }
                 }
             }
@@ -69,6 +105,24 @@ class DataProvider {
                 DispatchQueue.main.async {
                     completion(nil)
                 }
+            }
+        }
+    }
+    
+    func pokemonFormImage(withUrl url: String, completion: @escaping DataProviderCompletion) {
+        
+        connection.downloadImageData(fromUrl: url) {
+            
+            response, error in
+            
+            var image: UIImage?
+            
+            if let data = response as? Data {
+                image = UIImage(data: data)
+            }
+            
+            DispatchQueue.main.async {
+                completion(image)
             }
         }
     }
