@@ -5,6 +5,11 @@
 //  Created by Miguel Estévez on 1/11/17.
 //  Copyright © 2017 Miguel Estévez. All rights reserved.
 //
+//  This is a helper class that does the http/https connection, indexes the base url, and provides functionality
+//  to convert the NSData responsed by server into an NSDictionary object. Here we would add other post paramethers
+//  (not required by exercise) and manage authentication challenges, login and/or token/session stuff.
+//  Yet, this server does not implements authentication.
+//
 
 import UIKit
 

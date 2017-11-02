@@ -12,12 +12,12 @@ class ViewController: UIViewController {
 
     var pokemon: Pokemon?
     var allPokemonsNamedUrls = [NamedUrl]()
+    var validOption = 0
     
     var imageViews = [UIImageView]()
     var activityIndicators = [UIActivityIndicatorView]()
     var buttons = [UIButton]()
     
-    //var buttonColor = UIColor(red: 1.0, green: 42.0/255.0, blue: 32.0/255.0, alpha: 1.0)
     var buttonColor = UIColor(white:1.0, alpha: 0.6)
     
     @IBOutlet weak var background: UIImageView!
@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
     
+    // MARK: - View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setRandomBackground()
@@ -49,7 +51,7 @@ class ViewController: UIViewController {
             button.backgroundColor = buttonColor
         }
         
-        resetFormImages()
+        resetView()
         
         if allPokemonsNamedUrls.count == 0 {
             let dataProvider = DataProvider()
@@ -66,16 +68,23 @@ class ViewController: UIViewController {
             askPokemon()
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        view.layoutIfNeeded()
-        
-    }
 
-    func askPokemon() {
-        resetFormImages()
+    // MARK:  - Actions implementation
+    
+    @IBAction func responseButtonTapped(_ sender: UIButton) {
+        var isCorrect = true
+        buttons[validOption].backgroundColor = UIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 0.6)
+        if sender.titleLabel?.text != pokemon?.name {
+            sender.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.6)
+            isCorrect = false
+        }
+        printMessageForCorrectAnswer(isCorrect)
+    }
+    
+    // MARK: - Other private methods
+    
+    private func askPokemon() {
+        resetView()
  
         // Let's hardcode the max pokemon number...
         let randomId = Int(arc4random_uniform(UInt32(allPokemonsNamedUrls.count)) + 1);
@@ -85,21 +94,21 @@ class ViewController: UIViewController {
             response in
             
             if let pokemon = response as? Pokemon {
-                
+                print("... pokemon name: \(pokemon.name)")
                 self.pokemon = pokemon
                 self.setFormImages()
-                self.setButtonName()
+                self.setButtonNames()
             }
         }
     }
     
-    func setRandomBackground() {
+    private func setRandomBackground() {
         let random = Int(arc4random_uniform(7) + 1);
         let backgroundName = "wall\(random)"
         background.image = UIImage(named: backgroundName)
     }
     
-    func setFormImages() {
+    private func setFormImages() {
         for i in 0...3 {
             let dataProvider = DataProvider()
             
@@ -116,20 +125,48 @@ class ViewController: UIViewController {
         }
     }
     
-    func setButtonName() {
+    private func setButtonNames() {
         for button in buttons {
-            let randomId = Int(arc4random_uniform(UInt32(allPokemonsNamedUrls.count)) + 1);
+            var randomId = -1
+            repeat {
+                randomId = Int(arc4random_uniform(UInt32(allPokemonsNamedUrls.count)) + 1);
+            } while randomId == pokemon?.id
+            
             button.setTitle(allPokemonsNamedUrls[randomId].name, for: .normal)
         }
+        
+        validOption = Int(arc4random_uniform(UInt32(4)))
+        buttons[validOption].setTitle(pokemon?.name, for: .normal)
     }
     
-    func resetFormImages() {
+    private func resetView() {
         for imageView in imageViews {
             imageView.image = nil
         }
         for activityIndicator in activityIndicators {
             activityIndicator.startAnimating()
         }
+        for button in buttons {
+            button.setTitle("", for: .normal)
+            button.backgroundColor = buttonColor
+        }
+    }
+    
+    private func printMessageForCorrectAnswer(_ isCorrect: Bool) {
+        var message: String
+        
+        if isCorrect {
+            message = "Great! You have guessed this Pokémon's name. Do yo want to try again?"
+        }
+        else {
+            message = "Oh, no. This Pokémon is '\(pokemon?.name ?? "")'. Do yo want to try again?"
+        }
+        
+        let alert = UIAlertController(title: "Poké Quest", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: { alertAction in self.askPokemon() } )
+        alert.addAction(alertAction)
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 

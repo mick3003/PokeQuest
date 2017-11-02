@@ -26,17 +26,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5x8-Xc-gc4">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5x8-Xc-gc4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="What is this Pokémon's name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-ee-AFx">
-                                <rect key="frame" x="0.0" y="35" width="375" height="28"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="28"/>
                                 <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.58450704225352113" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZsK-eq-7kG">
-                                <rect key="frame" x="15" y="85" width="345" height="345"/>
+                                <rect key="frame" x="15" y="90" width="345" height="345"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DqM-YS-P58">
                                         <rect key="frame" x="0.0" y="0.0" width="166.5" height="345"/>
@@ -45,7 +45,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="166.5" height="166.5"/>
                                                 <subviews>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="V8O-1h-ERg">
-                                                        <rect key="frame" x="65.5" y="65" width="37" height="37"/>
+                                                        <rect key="frame" x="65" y="65.5" width="37" height="37"/>
                                                         <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </activityIndicatorView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-2G-LFy">
@@ -72,7 +72,7 @@
                                                 <rect key="frame" x="0.0" y="178.5" width="166.5" height="166.5"/>
                                                 <subviews>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wPb-9k-ZPC">
-                                                        <rect key="frame" x="65.5" y="65.5" width="37" height="37"/>
+                                                        <rect key="frame" x="65" y="65" width="37" height="37"/>
                                                         <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </activityIndicatorView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-3y-LQW">
@@ -104,7 +104,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="166.5" height="166.5"/>
                                                 <subviews>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="czy-DD-XEv">
-                                                        <rect key="frame" x="65" y="65" width="37" height="37"/>
+                                                        <rect key="frame" x="65.5" y="65.5" width="37" height="37"/>
                                                         <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </activityIndicatorView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ljF-Mr-tfL">
@@ -131,7 +131,7 @@
                                                 <rect key="frame" x="0.0" y="178.5" width="166.5" height="166.5"/>
                                                 <subviews>
                                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8BG-bj-8V4">
-                                                        <rect key="frame" x="65" y="65.5" width="37" height="37"/>
+                                                        <rect key="frame" x="65.5" y="65" width="37" height="37"/>
                                                         <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </activityIndicatorView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u0n-Fk-W88">
@@ -162,20 +162,23 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KjU-VT-0ly">
-                                <rect key="frame" x="15" y="537" width="345" height="100"/>
+                                <rect key="frame" x="15" y="527" width="345" height="110"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vdt-ge-GH9">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="110"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbK-9s-dNS">
-                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="49"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0M-ay-Agt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
-                                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="18"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0M-ay-Agt" customClass="Button" customModule="Poke__Quest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="49"/>
+                                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="21"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="responseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EiI-rq-TB9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -187,14 +190,17 @@
                                                 </constraints>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32C-Ls-TbJ">
-                                                <rect key="frame" x="0.0" y="56" width="162.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="61" width="162.5" height="49"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UN-mX-aO4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
-                                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="18"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UN-mX-aO4" customClass="Button" customModule="Poke__Quest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="49"/>
+                                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="21"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="responseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZRG-7k-tAk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -208,17 +214,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bjg-x3-d81">
-                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="100"/>
+                                        <rect key="frame" x="182.5" y="0.0" width="162.5" height="110"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4k-Rx-zwY">
-                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="49"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kb-pi-po1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
-                                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="18"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kb-pi-po1" customClass="Button" customModule="Poke__Quest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="49"/>
+                                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="21"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="responseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2DR-BQ-B6g"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,14 +239,17 @@
                                                 </constraints>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1i-bt-CGe">
-                                                <rect key="frame" x="0.0" y="56" width="162.5" height="44"/>
+                                                <rect key="frame" x="0.0" y="61" width="162.5" height="49"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-kV-gkj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="44"/>
-                                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="18"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-kV-gkj" customClass="Button" customModule="Poke__Quest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="49"/>
+                                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="21"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="responseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYH-SC-KkN"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -252,7 +264,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="qby-2x-caV"/>
+                                    <constraint firstAttribute="height" constant="110" id="qby-2x-caV"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -270,7 +282,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KjU-VT-0ly" secondAttribute="trailing" constant="15" id="a0z-5K-4ye"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZsK-eq-7kG" secondAttribute="trailing" constant="15" id="aBE-de-QhT"/>
                             <constraint firstAttribute="bottom" secondItem="5x8-Xc-gc4" secondAttribute="bottom" id="lWB-c4-7Ih"/>
-                            <constraint firstItem="zTn-ee-AFx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="ocY-JL-Ko3"/>
+                            <constraint firstItem="zTn-ee-AFx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ocY-JL-Ko3"/>
                             <constraint firstItem="KjU-VT-0ly" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="vnI-Od-dAs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

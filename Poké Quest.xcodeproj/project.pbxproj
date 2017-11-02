@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49512E401FAA57FE004B8319 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49512E3F1FAA57FE004B8319 /* Pokemon Hollow.ttf */; };
+		4998B8DB1FAACCE3001E905C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4998B8DA1FAACCE3001E905C /* Button.swift */; };
 		49AC1CE41FA94D8B00E5590C /* NamedUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC1CE31FA94D8B00E5590C /* NamedUrl.swift */; };
 		49AC1CE61FA9503000E5590C /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC1CE51FA9503000E5590C /* Form.swift */; };
 		49AC1CE81FA9565900E5590C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC1CE71FA9565900E5590C /* Pokemon.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		49512E3F1FAA57FE004B8319 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
 		49512E471FAA5C81004B8319 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Poké Quest/Info.plist"; sourceTree = SOURCE_ROOT; };
+		4998B8DA1FAACCE3001E905C /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		49AC1CE31FA94D8B00E5590C /* NamedUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedUrl.swift; sourceTree = "<group>"; };
 		49AC1CE51FA9503000E5590C /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		49AC1CE71FA9565900E5590C /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				49F654161FA8FE430075D1BA /* AppDelegate.swift */,
+				4998B8DA1FAACCE3001E905C /* Button.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				49AC1CE81FA9565900E5590C /* Pokemon.swift in Sources */,
 				49AC1CEA1FA95B8500E5590C /* Connection.swift in Sources */,
 				49AC1CE41FA94D8B00E5590C /* NamedUrl.swift in Sources */,
+				4998B8DB1FAACCE3001E905C /* Button.swift in Sources */,
 				49AC1CED1FA95E0000E5590C /* DataProvider.swift in Sources */,
 				49AC1CE61FA9503000E5590C /* Form.swift in Sources */,
 				49F654191FA8FE430075D1BA /* ViewController.swift in Sources */,
