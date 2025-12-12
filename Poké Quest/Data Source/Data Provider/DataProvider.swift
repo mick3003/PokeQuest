@@ -79,6 +79,47 @@ class DataProvider {
             if let json = response as? [String: Any] {
                 let pokemon = Pokemon(withJson: json)
                 
+                DispatchQueue.main.async {
+                    completion(pokemon)
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            }
+        }
+    }
+    
+    func pokemonFormImage(withUrl url: String, completion: @escaping DataProviderCompletion) {
+        
+        connection.downloadImageData(fromUrl: url) {
+            
+            response, error in
+            
+            var image: UIImage?
+            
+            if let data = response as? Data {
+                image = UIImage(data: data)
+            }
+            
+            DispatchQueue.main.async {
+                completion(image)
+            }
+        }
+    }
+    
+    
+    /*
+    func pokemon(withId id: Int, completion: @escaping DataProviderCompletion) {
+        
+        connection.connect(endpoint: "pokemon/\(id)") {
+            
+            response, error in
+            
+            if let json = response as? [String: Any] {
+                let pokemon = Pokemon(withJson: json)
+                
                 if pokemon.forms.count > 0 {
                     
                     self.connection.connect(endpoint: pokemon.forms[0].url) {
@@ -108,22 +149,5 @@ class DataProvider {
             }
         }
     }
-    
-    func pokemonFormImage(withUrl url: String, completion: @escaping DataProviderCompletion) {
-        
-        connection.downloadImageData(fromUrl: url) {
-            
-            response, error in
-            
-            var image: UIImage?
-            
-            if let data = response as? Data {
-                image = UIImage(data: data)
-            }
-            
-            DispatchQueue.main.async {
-                completion(image)
-            }
-        }
-    }
+    */
 }

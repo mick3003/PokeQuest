@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "2610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,66 +15,85 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77C27CA2-B1DD-4B68-A460-15F959C2DF84"
-               BuildableName = "Poké Quest.app"
-               BlueprintName = "Poké Quest"
-               ReferencedContainer = "container:Poké Quest.xcodeproj">
+               BuildableName = "Pok&#xe9; Quest.app"
+               BlueprintName = "Pok&#xe9; Quest"
+               ReferencedContainer = "container:Poke&#x301; Quest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
-      <Testables>
-      </Testables>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77C27CA2-B1DD-4B68-A460-15F959C2DF84"
-            BuildableName = "Poké Quest.app"
-            BlueprintName = "Poké Quest"
-            ReferencedContainer = "container:Poké Quest.xcodeproj">
+            BuildableName = "Pok&#xe9; Quest.app"
+            BlueprintName = "Pok&#xe9; Quest"
+            ReferencedContainer = "container:Poke&#x301; Quest.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "49F654121FA8FE430075D1BA"
+            BuildableName = "Poke&#x301; Quest.app"
+            BlueprintName = "Poke&#x301; Quest"
+            ReferencedContainer = "container:Poke&#x301; Quest.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77C27CA2-B1DD-4B68-A460-15F959C2DF84"
-            BuildableName = "Poké Quest.app"
-            BlueprintName = "Poké Quest"
-            ReferencedContainer = "container:Poké Quest.xcodeproj">
+            BuildableName = "Pok&#xe9; Quest.app"
+            BlueprintName = "Pok&#xe9; Quest"
+            ReferencedContainer = "container:Poke&#x301; Quest.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "77C27CA2-B1DD-4B68-A460-15F959C2DF84"
-            BuildableName = "Poké Quest.app"
-            BlueprintName = "Poké Quest"
-            ReferencedContainer = "container:Poké Quest.xcodeproj">
+            BuildableName = "Pok&#xe9; Quest.app"
+            BlueprintName = "Pok&#xe9; Quest"
+            ReferencedContainer = "container:Poke&#x301; Quest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "77C27CA2-B1DD-4B68-A460-15F959C2DF84"
+            BuildableName = "Pok&#xe9; Quest.app"
+            BlueprintName = "Pok&#xe9; Quest"
+            ReferencedContainer = "container:Poke&#x301; Quest.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
